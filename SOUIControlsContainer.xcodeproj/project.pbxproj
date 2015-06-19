@@ -14,6 +14,13 @@
 		F93C0B431B34458800A218EE /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F93C0B421B34458800A218EE /* Images.xcassets */; };
 		F93C0B461B34458800A218EE /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = F93C0B441B34458800A218EE /* LaunchScreen.xib */; };
 		F93C0B521B34458800A218EE /* SOUIControlsContainerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F93C0B511B34458800A218EE /* SOUIControlsContainerTests.swift */; };
+		F93C0B651B3445A100A218EE /* SOUIControls.h in Headers */ = {isa = PBXBuildFile; fileRef = F93C0B641B3445A100A218EE /* SOUIControls.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F93C0B6B1B3445A100A218EE /* SOUIControls.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F93C0B601B3445A100A218EE /* SOUIControls.framework */; };
+		F93C0B741B3445A100A218EE /* SOUIControlsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F93C0B731B3445A100A218EE /* SOUIControlsTests.swift */; };
+		F93C0B771B3445A100A218EE /* SOUIControls.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F93C0B601B3445A100A218EE /* SOUIControls.framework */; };
+		F93C0B781B3445A100A218EE /* SOUIControls.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F93C0B601B3445A100A218EE /* SOUIControls.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		F93C0B831B34464F00A218EE /* CircleLayers.swift in Sources */ = {isa = PBXBuildFile; fileRef = F93C0B821B34464F00A218EE /* CircleLayers.swift */; };
+		F93C0B861B34465D00A218EE /* PercentCompleteControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = F93C0B851B34465D00A218EE /* PercentCompleteControl.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -24,7 +31,42 @@
 			remoteGlobalIDString = F93C0B331B34458700A218EE;
 			remoteInfo = SOUIControlsContainer;
 		};
+		F93C0B6C1B3445A100A218EE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F93C0B2C1B34458700A218EE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F93C0B5F1B3445A100A218EE;
+			remoteInfo = SOUIControls;
+		};
+		F93C0B6E1B3445A100A218EE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F93C0B2C1B34458700A218EE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F93C0B331B34458700A218EE;
+			remoteInfo = SOUIControlsContainer;
+		};
+		F93C0B751B3445A100A218EE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F93C0B2C1B34458700A218EE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F93C0B5F1B3445A100A218EE;
+			remoteInfo = SOUIControls;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		F93C0B7C1B3445A100A218EE /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				F93C0B781B3445A100A218EE /* SOUIControls.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		F93C0B341B34458700A218EE /* SOUIControlsContainer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SOUIControlsContainer.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -38,6 +80,14 @@
 		F93C0B4B1B34458800A218EE /* SOUIControlsContainerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SOUIControlsContainerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F93C0B501B34458800A218EE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F93C0B511B34458800A218EE /* SOUIControlsContainerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SOUIControlsContainerTests.swift; sourceTree = "<group>"; };
+		F93C0B601B3445A100A218EE /* SOUIControls.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SOUIControls.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F93C0B631B3445A100A218EE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F93C0B641B3445A100A218EE /* SOUIControls.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SOUIControls.h; sourceTree = "<group>"; };
+		F93C0B6A1B3445A100A218EE /* SOUIControlsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SOUIControlsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F93C0B721B3445A100A218EE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F93C0B731B3445A100A218EE /* SOUIControlsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SOUIControlsTests.swift; sourceTree = "<group>"; };
+		F93C0B821B34464F00A218EE /* CircleLayers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircleLayers.swift; sourceTree = "<group>"; };
+		F93C0B851B34465D00A218EE /* PercentCompleteControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PercentCompleteControl.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,6 +95,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F93C0B771B3445A100A218EE /* SOUIControls.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -52,6 +103,21 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F93C0B5C1B3445A100A218EE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F93C0B671B3445A100A218EE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F93C0B6B1B3445A100A218EE /* SOUIControls.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +129,8 @@
 			children = (
 				F93C0B361B34458700A218EE /* SOUIControlsContainer */,
 				F93C0B4E1B34458800A218EE /* SOUIControlsContainerTests */,
+				F93C0B611B3445A100A218EE /* SOUIControls */,
+				F93C0B701B3445A100A218EE /* SOUIControlsTests */,
 				F93C0B351B34458700A218EE /* Products */,
 			);
 			sourceTree = "<group>";
@@ -72,6 +140,8 @@
 			children = (
 				F93C0B341B34458700A218EE /* SOUIControlsContainer.app */,
 				F93C0B4B1B34458800A218EE /* SOUIControlsContainerTests.xctest */,
+				F93C0B601B3445A100A218EE /* SOUIControls.framework */,
+				F93C0B6A1B3445A100A218EE /* SOUIControlsTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -115,7 +185,70 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		F93C0B611B3445A100A218EE /* SOUIControls */ = {
+			isa = PBXGroup;
+			children = (
+				F93C0B811B3445DC00A218EE /* Utilities */,
+				F93C0B801B3445AB00A218EE /* SOCircleProgressControl */,
+				F93C0B641B3445A100A218EE /* SOUIControls.h */,
+				F93C0B621B3445A100A218EE /* Supporting Files */,
+			);
+			path = SOUIControls;
+			sourceTree = "<group>";
+		};
+		F93C0B621B3445A100A218EE /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				F93C0B631B3445A100A218EE /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		F93C0B701B3445A100A218EE /* SOUIControlsTests */ = {
+			isa = PBXGroup;
+			children = (
+				F93C0B731B3445A100A218EE /* SOUIControlsTests.swift */,
+				F93C0B711B3445A100A218EE /* Supporting Files */,
+			);
+			path = SOUIControlsTests;
+			sourceTree = "<group>";
+		};
+		F93C0B711B3445A100A218EE /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				F93C0B721B3445A100A218EE /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		F93C0B801B3445AB00A218EE /* SOCircleProgressControl */ = {
+			isa = PBXGroup;
+			children = (
+				F93C0B851B34465D00A218EE /* PercentCompleteControl.swift */,
+			);
+			path = SOCircleProgressControl;
+			sourceTree = "<group>";
+		};
+		F93C0B811B3445DC00A218EE /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				F93C0B821B34464F00A218EE /* CircleLayers.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		F93C0B5D1B3445A100A218EE /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F93C0B651B3445A100A218EE /* SOUIControls.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
 		F93C0B331B34458700A218EE /* SOUIControlsContainer */ = {
@@ -125,10 +258,12 @@
 				F93C0B301B34458700A218EE /* Sources */,
 				F93C0B311B34458700A218EE /* Frameworks */,
 				F93C0B321B34458700A218EE /* Resources */,
+				F93C0B7C1B3445A100A218EE /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				F93C0B761B3445A100A218EE /* PBXTargetDependency */,
 			);
 			name = SOUIControlsContainer;
 			productName = SOUIControlsContainer;
@@ -153,6 +288,43 @@
 			productReference = F93C0B4B1B34458800A218EE /* SOUIControlsContainerTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		F93C0B5F1B3445A100A218EE /* SOUIControls */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F93C0B791B3445A100A218EE /* Build configuration list for PBXNativeTarget "SOUIControls" */;
+			buildPhases = (
+				F93C0B5B1B3445A100A218EE /* Sources */,
+				F93C0B5C1B3445A100A218EE /* Frameworks */,
+				F93C0B5D1B3445A100A218EE /* Headers */,
+				F93C0B5E1B3445A100A218EE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SOUIControls;
+			productName = SOUIControls;
+			productReference = F93C0B601B3445A100A218EE /* SOUIControls.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		F93C0B691B3445A100A218EE /* SOUIControlsTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F93C0B7D1B3445A100A218EE /* Build configuration list for PBXNativeTarget "SOUIControlsTests" */;
+			buildPhases = (
+				F93C0B661B3445A100A218EE /* Sources */,
+				F93C0B671B3445A100A218EE /* Frameworks */,
+				F93C0B681B3445A100A218EE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F93C0B6D1B3445A100A218EE /* PBXTargetDependency */,
+				F93C0B6F1B3445A100A218EE /* PBXTargetDependency */,
+			);
+			name = SOUIControlsTests;
+			productName = SOUIControlsTests;
+			productReference = F93C0B6A1B3445A100A218EE /* SOUIControlsTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -166,6 +338,13 @@
 						CreatedOnToolsVersion = 6.2;
 					};
 					F93C0B4A1B34458800A218EE = {
+						CreatedOnToolsVersion = 6.2;
+						TestTargetID = F93C0B331B34458700A218EE;
+					};
+					F93C0B5F1B3445A100A218EE = {
+						CreatedOnToolsVersion = 6.2;
+					};
+					F93C0B691B3445A100A218EE = {
 						CreatedOnToolsVersion = 6.2;
 						TestTargetID = F93C0B331B34458700A218EE;
 					};
@@ -186,6 +365,8 @@
 			targets = (
 				F93C0B331B34458700A218EE /* SOUIControlsContainer */,
 				F93C0B4A1B34458800A218EE /* SOUIControlsContainerTests */,
+				F93C0B5F1B3445A100A218EE /* SOUIControls */,
+				F93C0B691B3445A100A218EE /* SOUIControlsTests */,
 			);
 		};
 /* End PBXProject section */
@@ -202,6 +383,20 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		F93C0B491B34458800A218EE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F93C0B5E1B3445A100A218EE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F93C0B681B3445A100A218EE /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -229,6 +424,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		F93C0B5B1B3445A100A218EE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F93C0B861B34465D00A218EE /* PercentCompleteControl.swift in Sources */,
+				F93C0B831B34464F00A218EE /* CircleLayers.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F93C0B661B3445A100A218EE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F93C0B741B3445A100A218EE /* SOUIControlsTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -236,6 +448,21 @@
 			isa = PBXTargetDependency;
 			target = F93C0B331B34458700A218EE /* SOUIControlsContainer */;
 			targetProxy = F93C0B4C1B34458800A218EE /* PBXContainerItemProxy */;
+		};
+		F93C0B6D1B3445A100A218EE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F93C0B5F1B3445A100A218EE /* SOUIControls */;
+			targetProxy = F93C0B6C1B3445A100A218EE /* PBXContainerItemProxy */;
+		};
+		F93C0B6F1B3445A100A218EE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F93C0B331B34458700A218EE /* SOUIControlsContainer */;
+			targetProxy = F93C0B6E1B3445A100A218EE /* PBXContainerItemProxy */;
+		};
+		F93C0B761B3445A100A218EE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F93C0B5F1B3445A100A218EE /* SOUIControls */;
+			targetProxy = F93C0B751B3445A100A218EE /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -392,6 +619,78 @@
 			};
 			name = Release;
 		};
+		F93C0B7A1B3445A100A218EE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = SOUIControls/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		F93C0B7B1B3445A100A218EE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = SOUIControls/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		F93C0B7E1B3445A100A218EE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = SOUIControlsTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SOUIControlsContainer.app/SOUIControlsContainer";
+			};
+			name = Debug;
+		};
+		F93C0B7F1B3445A100A218EE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = SOUIControlsTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SOUIControlsContainer.app/SOUIControlsContainer";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -411,6 +710,7 @@
 				F93C0B571B34458800A218EE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F93C0B581B34458800A218EE /* Build configuration list for PBXNativeTarget "SOUIControlsContainerTests" */ = {
 			isa = XCConfigurationList;
@@ -419,6 +719,25 @@
 				F93C0B5A1B34458800A218EE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F93C0B791B3445A100A218EE /* Build configuration list for PBXNativeTarget "SOUIControls" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F93C0B7A1B3445A100A218EE /* Debug */,
+				F93C0B7B1B3445A100A218EE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F93C0B7D1B3445A100A218EE /* Build configuration list for PBXNativeTarget "SOUIControlsTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F93C0B7E1B3445A100A218EE /* Debug */,
+				F93C0B7F1B3445A100A218EE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
