@@ -19,7 +19,7 @@
 		F93C0B741B3445A100A218EE /* SOUIControlsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F93C0B731B3445A100A218EE /* SOUIControlsTests.swift */; };
 		F93C0B771B3445A100A218EE /* SOUIControls.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F93C0B601B3445A100A218EE /* SOUIControls.framework */; };
 		F93C0B781B3445A100A218EE /* SOUIControls.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F93C0B601B3445A100A218EE /* SOUIControls.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		F93C0B831B34464F00A218EE /* CircleLayers.swift in Sources */ = {isa = PBXBuildFile; fileRef = F93C0B821B34464F00A218EE /* CircleLayers.swift */; };
+		F93C0B831B34464F00A218EE /* CircleUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = F93C0B821B34464F00A218EE /* CircleUtility.swift */; };
 		F93C0B861B34465D00A218EE /* PercentCompleteControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = F93C0B851B34465D00A218EE /* PercentCompleteControl.swift */; };
 /* End PBXBuildFile section */
 
@@ -86,7 +86,7 @@
 		F93C0B6A1B3445A100A218EE /* SOUIControlsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SOUIControlsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F93C0B721B3445A100A218EE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F93C0B731B3445A100A218EE /* SOUIControlsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SOUIControlsTests.swift; sourceTree = "<group>"; };
-		F93C0B821B34464F00A218EE /* CircleLayers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircleLayers.swift; sourceTree = "<group>"; };
+		F93C0B821B34464F00A218EE /* CircleUtility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircleUtility.swift; sourceTree = "<group>"; };
 		F93C0B851B34465D00A218EE /* PercentCompleteControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PercentCompleteControl.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -232,7 +232,7 @@
 		F93C0B811B3445DC00A218EE /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
-				F93C0B821B34464F00A218EE /* CircleLayers.swift */,
+				F93C0B821B34464F00A218EE /* CircleUtility.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -429,7 +429,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F93C0B861B34465D00A218EE /* PercentCompleteControl.swift in Sources */,
-				F93C0B831B34464F00A218EE /* CircleLayers.swift in Sources */,
+				F93C0B831B34464F00A218EE /* CircleUtility.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -635,7 +635,7 @@
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SKIP_INSTALL = YES;
+				SKIP_INSTALL = NO;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
@@ -653,7 +653,7 @@
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SKIP_INSTALL = YES;
+				SKIP_INSTALL = NO;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};

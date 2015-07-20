@@ -20,7 +20,7 @@ class FirstViewController: UIViewController {
     }
 
     override func viewDidAppear(animated: Bool) {
-        self.progressCircleView.animateProgress(45)
+        self.progressCircleView.animateProgress(45, ignoreDuration: false)
     }
     
     override func didReceiveMemoryWarning() {

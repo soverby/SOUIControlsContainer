@@ -1,5 +1,5 @@
 //
-//  SOCircleLayers.swift
+//  CircleUtility.swift
 //  PercentCompleteControl
 //
 //  Created by Overby, Sean on 6/16/15.
@@ -9,7 +9,9 @@
 import Foundation
 import UIKit
 
-public class CircleLayers {
+public class CircleUtility: NSObject {
+    
+    public typealias CircleAttributes = (centerPoint: CGPoint, outerRadius: Double, innerRadius: Double, animationRadius: Double, animationLineWidth: Double)
     
     public class func degreesToRadians(angle: CFloat) -> CGFloat {
         return CGFloat(angle / 180.0 * CFloat(M_PI))
@@ -51,5 +53,15 @@ public class CircleLayers {
         strokeAnimation.toValue = 1.0
         strokeAnimation.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseIn)
         return strokeAnimation
+    }
+    
+    public class func baseCircleFromFrame(frameSize: CGSize, circleWidth: Int) -> CircleUtility.CircleAttributes {
+        let ibCenterPoint = CGPoint(x: frameSize.width / 2, y: frameSize.height / 2)
+        let ibOuterRadius = Double((min(frameSize.width, frameSize.height) - 4) / 2)
+        let ibInnerRadius = ibOuterRadius - Double(circleWidth)
+        let ibAnimationRadius = ibInnerRadius + Double(circleWidth / 2)
+        let ibAnimationLineWidth = ibOuterRadius - ibInnerRadius - 1
+        
+        return (ibCenterPoint, ibOuterRadius, ibInnerRadius, ibAnimationRadius, ibAnimationLineWidth)
     }
 }

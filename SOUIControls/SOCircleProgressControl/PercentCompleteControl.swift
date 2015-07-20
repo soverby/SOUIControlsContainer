@@ -13,12 +13,11 @@ import QuartzCore
 @IBDesignable
 public class PercentCompleteControl: UIView {
     
-    typealias CircleAttributes = (centerPoint: CGPoint, outerRadius: Double, innerRadius: Double, animationRadius: Double, animationLineWidth: Double)
-    
     var outerCircle: CALayer?
     var innerCircle: CALayer?
     var animatedCircle: CALayer?
-    var calculatedCircleAttributes: CircleAttributes?
+    var lastPercentComplete: Double?
+    var calculatedCircleAttributes: CircleUtility.CircleAttributes?
     
     @IBInspectable var circleOutlineColor: UIColor = UIColor.whiteColor()
     @IBInspectable var animationColor: UIColor = UIColor.whiteColor()
@@ -33,43 +32,38 @@ public class PercentCompleteControl: UIView {
 
     override public func layoutSubviews() {
         super.layoutSubviews()
-        self.calculatedCircleAttributes = baseCircleAttributes()
+        self.calculatedCircleAttributes = CircleUtility.baseCircleFromFrame(self.frame.size, circleWidth: self.circleWidth)
         addBaseCircles(self.calculatedCircleAttributes!, strokeColor: circleOutlineColor, lineWidth: circleOutlineLineWidth)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "orientationDidChange", name: UIDeviceOrientationDidChangeNotification, object: nil)
     }
     
-    public func animateProgress(percentComplete: Double) {
+    public func animateProgress(percentComplete: Double, ignoreDuration: Bool) {
         if let realizedAnimationCircle = self.animatedCircle {
             realizedAnimationCircle.removeFromSuperlayer()
         }
         
         if let realizedCircleAttributes = self.calculatedCircleAttributes {
-            let progressCircle = CircleLayers.animatedPercentCircle(realizedCircleAttributes.centerPoint, radius: realizedCircleAttributes.animationRadius, percentComplete: percentComplete, strokeColor: self.animationColor, lineWidth: realizedCircleAttributes.animationLineWidth)
+            let progressCircle = CircleUtility.animatedPercentCircle(realizedCircleAttributes.centerPoint, radius: realizedCircleAttributes.animationRadius, percentComplete: percentComplete, strokeColor: self.animationColor, lineWidth: realizedCircleAttributes.animationLineWidth)
             progressCircle.name = self.animatedCircleName
             animatedCircle = progressCircle
             self.layer.addSublayer(progressCircle)
             
-            let progressAnimation = CircleLayers.strokeAnimation(self.animationDuration)
-            progressCircle.addAnimation(progressAnimation, forKey: animationName)
+            if(!ignoreDuration) {
+                let progressAnimation = CircleUtility.strokeAnimation(self.animationDuration)
+                progressCircle.addAnimation(progressAnimation, forKey: animationName)
+            }
+            
+            self.lastPercentComplete = percentComplete
         }
     }
     
-    private func baseCircleAttributes() -> CircleAttributes {
-        let ibCenterPoint = CGPoint(x: self.frame.size.width / 2, y: self.frame.size.height / 2)
-        let ibOuterRadius = Double((min(self.frame.size.width, self.frame.size.height) - 4) / 2)
-        let ibInnerRadius = ibOuterRadius - Double(circleWidth)
-        let ibAnimationRadius = ibInnerRadius + Double(circleWidth / 2)
-        let ibAnimationLineWidth = ibOuterRadius - ibInnerRadius - 2
-
-        return (ibCenterPoint, ibOuterRadius, ibInnerRadius, ibAnimationRadius, ibAnimationLineWidth)
-    }
-    
-    private func addBaseCircles(baseCircle: CircleAttributes, strokeColor: UIColor, lineWidth: CGFloat) {
+    private func addBaseCircles(baseCircle: CircleUtility.CircleAttributes, strokeColor: UIColor, lineWidth: CGFloat) {
         
         if let realizedInnerCircle = self.innerCircle {
             realizedInnerCircle.removeFromSuperlayer()
         }
         
-        let innerShapeLayer = CircleLayers.baseCircle(baseCircle.centerPoint, radius: baseCircle.outerRadius, strokeColor: strokeColor, lineWidth: Double(lineWidth))
+        let innerShapeLayer = CircleUtility.baseCircle(baseCircle.centerPoint, radius: baseCircle.outerRadius, strokeColor: strokeColor, lineWidth: Double(lineWidth))
         innerShapeLayer.name = innerCircleName
         self.innerCircle = innerShapeLayer
         
@@ -79,7 +73,7 @@ public class PercentCompleteControl: UIView {
             realizedOuterCircle.removeFromSuperlayer()
         }
         
-        let outerShapeLayer = CircleLayers.baseCircle(baseCircle.centerPoint, radius: baseCircle.innerRadius, strokeColor: strokeColor, lineWidth: Double(lineWidth))
+        let outerShapeLayer = CircleUtility.baseCircle(baseCircle.centerPoint, radius: baseCircle.innerRadius, strokeColor: strokeColor, lineWidth: Double(lineWidth))
         outerShapeLayer.name = outerCircleName
         self.outerCircle = outerShapeLayer
         
@@ -88,7 +82,11 @@ public class PercentCompleteControl: UIView {
         
     }
     
-
+    public func orientationDidChange() {
+        if let actualLastPercentComplete = self.lastPercentComplete {
+            animateProgress(actualLastPercentComplete, ignoreDuration: true)
+        }
+    }
 }
 
 
