@@ -1,2 +1,2 @@
 # SOUIControlsContainer
-Customer UI Controls framework and container project 
+Custom UI Controls framework and container project 
